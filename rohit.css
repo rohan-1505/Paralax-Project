@@ -1,0 +1,183 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100vh;  /* Full height of the viewport */
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto;  /* Allow scrolling if content exceeds viewport height */
+    overflow-x: hidden;  /* Hide any horizontal overflow */
+    perspective: 10px;  /* Add perspective for 3D effect */
+}
+
+.container {
+    position: relative;
+    height: 100%;  /* Full height of the wrapper */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;  /* Ensure foreground content stays on top */
+    transform-style: preserve-3d;  /* Enable 3D transformations on child elements */
+}
+
+.background {
+    position: absolute;  /* Make the background image position absolute */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateZ(-40px) scale(5); /* Center image and apply 3D effect */
+    width: 100%;  /* Make the image take up the full width of the container */
+    height: 100%;  /* Keep the aspect ratio of the image */
+    object-fit: cover;  /* Ensure the image covers the container area */
+    z-index: -1;  /* Place the background image behind the foreground content */
+}
+
+.foreground {
+    position: relative;
+    transform: translateY(-100px) translateZ(-20px); /* Move it slightly down */
+    z-index: 1;
+}
+
+section {
+    background-color: rgba(45, 45, 45); /* Slight transparency to overlay on background */
+    color: white;
+    padding: 5rem 0;
+    z-index: 1; /* Ensure section content is above background */
+    position: relative;
+}
+
+.sechead {
+    font-size: 4rem;  /* Adjusted size for heading */
+    padding: 0 5rem;  /* Reduced padding */
+    text-align: center;  /* Center align the heading */
+}
+
+.text {
+    font-size: 1.5rem;
+    margin: 3rem 0;  /* Adjusted margin */
+    padding: 0 10rem;
+    line-height: 1.8;  /* Improved line height for readability */
+}
+ul {
+    font-size: 1.5rem;
+    margin: 1rem 1rem;  /* Adjusted margin */
+    padding: 0 10rem;
+    line-height: 1.8;  /* Imp Adjust font size to match the rest of the text */
+}
+
+
+
+.bg {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center 20%;  /* Moves the background image slightly down */
+    height: 500px;
+}
+
+.desc {
+    position: absolute;
+    background-color:white;/* Semi-transparent white background for readability */
+    padding: 0.5rem 2.5rem;
+    font-size: 3.5rem;
+    color: black;
+    top: 40%;  /* Adjust the vertical position of text */
+    left: 50%;
+    transform: translateX(-50%);  /* Center text horizontally */
+}
+
+.bg1 {
+    background-image: url('special.webp');
+}
+
+.bg2 {
+    background-image: url('208.jpg');
+}
+
+.bg3 {
+    background-image: url('rohit.jpg');
+}
+.player-stats {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-image: url(ro);
+    background-color:yellow;
+    border-radius: 8px;
+}
+
+.player-stats h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: black;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+table td {
+    background-color: black;
+}
+
+table tr:nth-child(even) td {
+    background-color: black;
+}
+.did-you-know {
+    background-color: black;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+.did-you-know h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.did-you-know ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.did-you-know li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.cta {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background-color: #e60000; /* Red color */
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #b30000;
+}
+
